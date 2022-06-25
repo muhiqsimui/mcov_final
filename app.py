@@ -207,7 +207,8 @@ def sms_reply():
 # =========== ROUTES CLOSE ==================>
 
     def rs(text):
-        msg.body(text+'\n')
+        batas = '='*30
+        msg.body(text+'\n'+batas)
         responded = True
 
     def cari(kota):
