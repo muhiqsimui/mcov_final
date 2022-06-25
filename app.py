@@ -249,7 +249,7 @@ def sms_reply():
             # kota=kota.title()
             if j['province'] == kota:
                 rs(f"\nNama :{j['name']}\n✅Alamat :{j['address']}\nTelepon :{j['phone']}\n")
-
+        responded = True
     def daerah():
         if pesan.startswith('cari '):
             pl = pesan.lower()[5:]
@@ -355,13 +355,14 @@ def sms_reply():
             else:
                 msg.body("Data yang Anda cari tidak ditemukan mohon masukan nama *Provinsi* yang tepat \n\n")
                 responded = True
+            responded = True
     daerah()
 
     if responded == False:
         msg.body(
             'Anda bisa ketik *Menu* untuk kembali ke Menu Utama dan menggunakan *Whatsapp Bot COVID-19*')
 
-    return str(resp)
+    # return str(resp)
 
 
 if __name__ == "__main__":
