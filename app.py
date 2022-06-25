@@ -170,13 +170,12 @@ def sms_reply():
 
     if pesan == '7':
         # Menampilkan daftar rumah sakit indonesia
-        rsx = f"Data Kementerian Kesehatan saat ini ada 132 Rumah Sakit rujukan di indonesia untuk penanganan kasus COVID-19.\n\n"
+        rsx = f".\nMenurut data Kementerian Kesehatan saat ini ada 132 Rumah Sakit rujukan di indonesia untuk penanganan kasus COVID-19.\n\n"
         rsx2 = f"Ketik *cari spasi nama_provinsi* yang ingin kamu cari contoh *cari Yogyakarta*\nBerikut daftarnya :\n\n"
         rsx3 = f"1.Aceh\n2.Sumatera Utara\n3.Sumatera Barat\n4.Riau\n5.Kepulauan Riau\n6.Jambi\n7.Sumatera Selatan\n8.Bangka Belitung\n9.Bengkulu\n10.Lampung\n11.DKI Jakarta\n12.Jawa Barat\n13.Banten\n14.Jawa Tengah\n15.Daerah Istimewa Yogyakarta\n16.Jawa Timur\n17.Bali\n18.Nusa Tenggara Barat\n19.Nusa Tenggara Timur\n20.Kalimantan Barat\n21.Kalimantan Tengah\n22.Kalimantan Selatan\n23.Kalimantan Timur\n24.Kalimantan Utara\n25.Gorontalo\n26.Sulawesi Utara\n27.Sulawesi Barat\n28.Sulawesi Tengah\n29. Sulawesi Selatan\n30.Sulawesi Tenggara\n31.Maluku\n32.Maluku Utara\n33.Papua\n34.Papua Barat  \n\n"
         msg.body(rsx+rsx2+rsx3)
         msg.body(
             '\n Untuk informasi lebih lanjut anda cukup mengetikkan nama kota diatas')
-        responded = True            
 
 #     # Tutup Menampilkan daftar rumah sakit indonesia
     if pesan == '8':
@@ -250,7 +249,7 @@ def sms_reply():
             # kota=kota.title()
             if j['province'] == kota:
                 rs(f"\nNama :{j['name']}\n✅Alamat :{j['address']}\nTelepon :{j['phone']}\n")
-        responded = True
+
     def daerah():
         if pesan.startswith('cari '):
             pl = pesan.lower()[5:]
@@ -355,15 +354,14 @@ def sms_reply():
                 cari('Papua Barat')
             else:
                 msg.body("Data yang Anda cari tidak ditemukan mohon masukan nama *Provinsi* yang tepat \n\n")
-                responded = True
-            responded = True
+
     daerah()
 
     if responded == False:
         msg.body(
             'Anda bisa ketik *Menu* untuk kembali ke Menu Utama dan menggunakan *Whatsapp Bot COVID-19*')
 
-    # return str(resp)
+    return str(resp)
 
 
 if __name__ == "__main__":
