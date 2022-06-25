@@ -256,7 +256,7 @@ def sms_reply():
 
     def daerah():
         
-        if pesan.startswith('cari '.lower()):
+        if pesan.startswith('cari ') or pesan.startswith('Cari '):
             pl = pesan.lower()[5:]
             if "aceh" in pl:
                 cari("Aceh")
