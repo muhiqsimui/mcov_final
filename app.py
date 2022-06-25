@@ -240,15 +240,15 @@ def sms_reply():
         for pro in cov_provin:
             if (server_ind == 1):
                 if pro['name'] == kota:
-                    rs(f".\n *{pro['name']}* \n Kasus :{pro['numbers']['infected']} \n Sembuh : {pro['numbers']['recovered']} \n Meninggal :{pro['numbers']['fatal']}\n\n")
+                    rs(f"\n *{pro['name']}* \n Kasus :{pro['numbers']['infected']} \n Sembuh : {pro['numbers']['recovered']} \n Meninggal :{pro['numbers']['fatal']}\n\n")
             elif(server_ind == 2):
                 kotax = kota.upper()
                 if pro['key'] == kotax:
-                    rs(f".\n *{pro['key']}* \n Kasus :{pro['jumlah_kasus']} \n Sembuh : {pro['jumlah_sembuh']} \n Meninggal :{pro['jumlah_meninggal']}\n\n")
+                    rs(f"\n *{pro['key']}* \n Kasus :{pro['jumlah_kasus']} \n Sembuh : {pro['jumlah_sembuh']} \n Meninggal :{pro['jumlah_meninggal']}\n\n")
         for j in datrs:
             # kota=kota.title()
             if j['province'] == kota:
-                rs(f".\nNama :{j['name']}\n\n✅Alamat :{j['address']}\nTelepon :{j['phone']}\n.")
+                rs(f"\nNama :{j['name']}\n✅Alamat :{j['address']}\nTelepon :{j['phone']}\n")
 
     def daerah():
 
