@@ -176,6 +176,7 @@ def sms_reply():
         msg.body(rsx+rsx2+rsx3)
         msg.body(
             '\n Untuk informasi lebih lanjut anda cukup mengetikkan nama kota diatas')
+        responded = True
 
 #     # Tutup Menampilkan daftar rumah sakit indonesia
     if pesan == '8':
@@ -253,6 +254,7 @@ def sms_reply():
     def daerah():
         if pesan.startswith('cari '):
             pl = pesan.lower()[5:]
+            responded = True
             if "aceh" in pl:
                 cari("Aceh")
             elif "sumatera utara" in pl or "sumut" in pl or "medan" in pl:
