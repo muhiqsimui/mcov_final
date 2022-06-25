@@ -4,7 +4,6 @@ from twilio.twiml.messaging_response import MessagingResponse
 from random import randrange
 from pkg import info, odi, map ,who
 from pkg import info_prov as prov
-# from pkg import vaksinasi as va
 import time
 
 app = Flask(__name__)
@@ -150,23 +149,34 @@ def sms_reply():
         responded = True
 
     def vaksinx():
-        # text = f"*🇮🇩 Informasi vaksinasi Indonesia 🇮🇩* \n\n🎯Total Sasaran Vaksinasi : *{va.total_sasaran_vaksinasi}*\n"
+        vax = f"""
+        DATA PENAMBAHAN HARIAN TEST PCR/SWAB INDONESIA
+        {info.penambahan_jumlah_spesimen_pcr_tcm}
+        {info.penambahan_jumlah_spesimen_antigen}
+        {info.penambahan_jumlah_orang_pcr_tcm}
+        {info.penambahan_jumlah_orang_antigen}
+        {info.penambahan_tanggal}
+        {info.penambahan_created}
 
-        # sdmk = f"✅Vaksinasi 1 : {va.sdmk_vaksinasi_1} ✅Vaksinasi 2 : {va.sdmk_vaksinasi_2}\n"
-        # pub = f"✅Vaksinasi 1 : {va.pb_vaksinasi_1} ✅Vaksinasi 2 : {va.pb_vaksinasi_2}\n"
-        # lansia = f"✅Vaksinasi 1 : {va.lansia_vaksinasi_1} ✅Vaksinasi 2 : {va.lansia_vaksinasi_2}\n"
-        # umum = f"✅Vaksinasi 1 : {va.umum_vaksinasi_1} ✅Vaksinasi 2 : {va.umum_vaksinasi_2}\n"
-        # remaja = f"✅Vaksinasi 1 : {va.remaja_vaksinasi_1} ✅Vaksinasi 2 : {va.remaja_vaksinasi_2}\n"
+        TOTAL SWAB PCR INDONESIA
+        {info.total_jumlah_spesimen_pcr_tcm}
+        {info.total_jumlah_spesimen_antigen}
+        {info.total_jumlah_orang_pcr_tcm}
+        {info.total_jumlah_orang_antigen}
 
-        # text2 = f"🎯Target vaksinasi tenaga medis :{va.sasaran_vaksinasi_sdmk}\n"+sdmk
-        # text3 = f"🎯Target vaksinasi petugas publik :{va.sasaran_vaksinasi_petugas_publik}\n"+pub
-        # text4 = f"🎯Target vaksinasi lansia :{va.sasaran_vaksinasi_lansia}\n"+lansia
-        # text5 = f"🎯Target vaksinasi masyarakat umum :{va.sasaran_vaksinasi_masyarakat_umum}\n"+umum
-        # text6 = f"🎯Target vaksinasi usia rentang (12-17) :{va.sasaran_vaksinasi_kelompok_1217}\n"+remaja
-        # total_v = f"*Total Sudah Vaksin* \n ✅Vaksinasi Tahap 1 :\n*{va.jumlah_vaksinasi_1}*\n ✅Vaksinasi Tahap 2 : \n*{va.jumlah_vaksinasi_2}*\n\n sumber data: cekdiri.id "
+        DATA PENAMBAHAN VAKSINASI
+        {info.pcr_jumlah_vaksinasi_1}
+        {info.pcr_jumlah_vaksinasi_2}
+        {info.tanggal}
+        {info.created}
 
-        # msg.body(text+text2+text3+text4+text5+text6+total_v)
-        msg.body('maaf saat ini menu ini sedang di perbaiki ')
+        TOTAL DATA YANG TELAH DIVAKSIN
+        {info.vaksin_jumlah_vaksinasi_1}
+        {info.vaksin__jumlah_vaksinasi_2}
+        """
+        
+        
+        msg.body(vax)
         responded = True
 
     if pesan == '7':
