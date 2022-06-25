@@ -151,28 +151,28 @@ def sms_reply():
     def vaksinx():
         vax = f"""
         DATA PENAMBAHAN HARIAN TEST PCR/SWAB INDONESIA
-        {info.penambahan_jumlah_spesimen_pcr_tcm}
-        {info.penambahan_jumlah_spesimen_antigen}
-        {info.penambahan_jumlah_orang_pcr_tcm}
-        {info.penambahan_jumlah_orang_antigen}
-        {info.penambahan_tanggal}
-        {info.penambahan_created}
+        Penambahan jumlah spesimen : {info.penambahan_jumlah_spesimen_pcr_tcm}
+        Penambahan jumlah spesimen antigen : {info.penambahan_jumlah_spesimen_antigen}
+        Penambahan jumlah orang pcr tcm : {info.penambahan_jumlah_orang_pcr_tcm}
+        Penambahan jumlah orang antigen : {info.penambahan_jumlah_orang_antigen}
+        Penambahan tanggal{info.penambahan_tanggal}
+        Penambahan created {info.penambahan_created}
 
         TOTAL SWAB PCR INDONESIA
-        {info.total_jumlah_spesimen_pcr_tcm}
-        {info.total_jumlah_spesimen_antigen}
-        {info.total_jumlah_orang_pcr_tcm}
-        {info.total_jumlah_orang_antigen}
+        Total jumlah spesimen pcr tcm : {info.total_jumlah_spesimen_pcr_tcm}
+        total jumlah spesimen antigen : {info.total_jumlah_spesimen_antigen}
+        total jumlah orang pcr tcm : {info.total_jumlah_orang_pcr_tcm}
+        total jumlah orang antigen : {info.total_jumlah_orang_antigen}
 
         DATA PENAMBAHAN VAKSINASI
-        {info.pcr_jumlah_vaksinasi_1}
-        {info.pcr_jumlah_vaksinasi_2}
-        {info.tanggal}
-        {info.created}
+        pcr_jumlah_vaksinasi_1 : {info.pcr_jumlah_vaksinasi_1}
+        pcr_jumlah_vaksinasi_2 : {info.pcr_jumlah_vaksinasi_2}
+        tanggal : {info.tanggal}
+        created : {info.created}
 
         TOTAL DATA YANG TELAH DIVAKSIN
-        {info.vaksin_jumlah_vaksinasi_1}
-        {info.vaksin__jumlah_vaksinasi_2}
+        vaksin jumlah vaksinasi 1 : {info.vaksin_jumlah_vaksinasi_1}
+        vaksin jumlah vaksinasi 2 : {info.vaksin_jumlah_vaksinasi_2}
         """
         
         

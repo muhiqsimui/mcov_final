@@ -76,5 +76,5 @@ created = str(data_vaksinasi['vaksinasi']['penambahan']['created'])
 # TOTAL DATA YANG TELAH DIVAKSIN
 vaksin_jumlah_vaksinasi_1 = str(
     data_vaksinasi['vaksinasi']['penambahan']['jumlah_vaksinasi_1'])
-vaksin__jumlah_vaksinasi_2 = str(
+vaksin_jumlah_vaksinasi_2 = str(
     data_vaksinasi['vaksinasi']['penambahan']['jumlah_vaksinasi_2'])
