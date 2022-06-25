@@ -254,103 +254,105 @@ def sms_reply():
         pl = pesan.lower()
         if "aceh" in pl:
             cari("Aceh")
-        if "sumatera utara" in pl or "sumut" in pl or "medan" in pl:
+        elif "sumatera utara" in pl or "sumut" in pl or "medan" in pl:
             cari('Sumatera Utara')
 
-        if "sumatera barat" in pl or "sumbar" in pl or "padang" in pl:
+        elif "sumatera barat" in pl or "sumbar" in pl or "padang" in pl:
             cari('Sumatera Barat')
 
-        if "kepulauan riau" in pl or "kepri" in pl or "Kep. Riau" in pl or "tanjungpinang" in pl:
+        elif "kepulauan riau" in pl or "kepri" in pl or "Kep. Riau" in pl or "tanjungpinang" in pl:
             cari('Kep. Riau')
-        if "riau" in pl or "pekanbaru" in pl:
+        elif "riau" in pl or "pekanbaru" in pl:
             cari('Riau')
 
-        if "jambi" in pl:
+        elif "jambi" in pl:
             cari('Jambi')
-        if "sumatera selatan" in pl or "sumsel" in pl or "palembang" in pl:
+        elif "sumatera selatan" in pl or "sumsel" in pl or "palembang" in pl:
             cari('Sumatera Selatan')
-        if "bangka belitung" in pl or 'Kep. Bangka Belitung' in pl:
+        elif "bangka belitung" in pl or 'Kep. Bangka Belitung' in pl:
             cari('Kep. Bangka Belitung')
 
-        if "bengkulu" in pl:
+        elif "bengkulu" in pl:
             cari("Bengkulu")
 
-        if "lampung" in pl:
+        elif "lampung" in pl:
             cari("Lampung")
 
-        if "dki jakarta" in pl or "jakarta" in pl or "dki" in pl:
+        elif "dki jakarta" in pl or "jakarta" in pl or "dki" in pl:
             cari("DKI Jakarta")
 
-        if "jawa barat" in pl or "jabar" in pl or "bandung" in pl:
+        elif "jawa barat" in pl or "jabar" in pl or "bandung" in pl:
             cari("Jawa Barat")
 
-        if "banten" in pl:
+        elif "banten" in pl:
             cari("Banten")
 
-        if "jawa tengah" in pl or "jateng" in pl or "semarang" in pl:
+        elif "jawa tengah" in pl or "jateng" in pl or "semarang" in pl:
             # PROBLEM GK JALAN lebih 1600
             cari("Jawa Tengah")
 
-        if "daerah istimewa yogyakarta" in pl or "yogyakarta" in pl or "jogja" in pl or "diy" in pl:
+        elif "daerah istimewa yogyakarta" in pl or "yogyakarta" in pl or "jogja" in pl or "diy" in pl:
             cari('DI Yogyakarta')
 
-        if "jawa timur" in pl or "jatim" in pl or "Jawa Timur" in pl or "surabaya" in pl:
+        elif "jawa timur" in pl or "jatim" in pl or "Jawa Timur" in pl or "surabaya" in pl:
             # PROBLEM GK JALAN lebih 1600 karakter
             cari('Jawa Timur')
 
-        if "bali" in pl:
+        elif "bali" in pl:
             cari('Bali')
 
-        if "nusa tenggara barat" in pl or "ntb" in pl:
+        elif "nusa tenggara barat" in pl or "ntb" in pl:
             cari('Nusa Tenggara Barat')
 
-        if "nusa tenggara timur" in pl or "ntt" in pl:
+        elif "nusa tenggara timur" in pl or "ntt" in pl:
             cari('Nusa Tenggara Timur')
 
-        if "kalimantan barat" in pl or "kalbar" in pl:
+        elif "kalimantan barat" in pl or "kalbar" in pl:
             cari('Kalimantan Barat')
 
-        if "kalimantan tengah" in pl or "kalteng" in pl:
+        elif "kalimantan tengah" in pl or "kalteng" in pl:
             cari('Kalimantan Tengah')
 
-        if "kalimantan selatan" in pl or "kalsel" in pl:
+        elif "kalimantan selatan" in pl or "kalsel" in pl:
             cari('Kalimantan Selatan')
 
-        if "kalimantan timur" in pl or "kaltim" in pl:
+        elif "kalimantan timur" in pl or "kaltim" in pl:
             cari('Kalimantan Timur')
 
-        if "kalimantan utara" in pl or "kaltara" in pl:
+        elif "kalimantan utara" in pl or "kaltara" in pl:
             cari('Kalimantan Utara')
 
-        if "gorontalo" in pl:
+        elif "gorontalo" in pl:
             cari('Gorontalo')
 
-        if "sulawesi utara" in pl or "sulut" in pl:
+        elif "sulawesi utara" in pl or "sulut" in pl:
             cari('Sulawesi Utara')
 
-        if "sulawesi barat" in pl or "sulbar" in pl:
+        elif "sulawesi barat" in pl or "sulbar" in pl:
             cari('Sulawesi Barat')
 
-        if "sulawesi tengah" in pl or "sulteng" in pl:
+        elif "sulawesi tengah" in pl or "sulteng" in pl:
             cari('Sulawesi Tengah')
 
-        if "sulawesi selatan" in pl or "sulsel" in pl or "makassar" in pl:
+        elif "sulawesi selatan" in pl or "sulsel" in pl or "makassar" in pl:
             cari('Sulawesi Selatan')
 
-        if "sulawesi tenggara" in pl or "sultara" in pl:
+        elif "sulawesi tenggara" in pl or "sultara" in pl:
             cari('Sulawesi Tenggara')
 
-        if "maluku" in pl:
+        elif "maluku" in pl:
             cari('Maluku')
 
-        if "maluku utara" in pl or "malut" in pl:
+        elif "maluku utara" in pl or "malut" in pl:
             cari('Maluku Utara')
 
-        if "papua" in pl:
+        elif "papua" in pl:
             cari('Papua')
 
-        if "papua barat" in pl or 'sorong' in pl:
+        elif "papua barat" in pl or 'sorong' in pl:
             cari('Papua Barat')
+        else:
+            msg.body("Data yang anda cari tidak ditemukan mohon masukan nama *provinsi* yang tepat")
 
     daerah()
 
