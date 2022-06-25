@@ -357,7 +357,8 @@ def sms_reply():
                 cari('Papua Barat')
             else:
                 msg.body("Data yang Anda cari tidak ditemukan mohon masukan nama *Provinsi* yang tepat \n\n")
-        responded = True
+                responded = True
+            responded = True
     daerah()
 
     if responded == False:
