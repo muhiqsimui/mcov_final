@@ -167,6 +167,7 @@ def sms_reply():
 
         # msg.body(text+text2+text3+text4+text5+text6+total_v)
         msg.body('maaf saat ini menu ini sedang di perbaiki ')
+        responded = True
 
     if pesan == '7':
         # Menampilkan daftar rumah sakit indonesia
@@ -194,6 +195,7 @@ def sms_reply():
 
     if pesan == '10':
         vaksinx()
+        responded = True
 
     if 'news' in pesan or "News" in pesan or 'berita' in pesan:
 
@@ -357,8 +359,9 @@ def sms_reply():
                 cari('Papua Barat')
             else:
                 msg.body("Data yang Anda cari tidak ditemukan mohon masukan nama *Provinsi* yang tepat \n\n")
-                responded = True
-            responded = True
+                if responded == False:
+                    responded = True
+            
     daerah()
 
     if responded == False:
