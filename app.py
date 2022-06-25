@@ -247,7 +247,7 @@ def sms_reply():
         for j in datrs:
             # kota=kota.title()
             if j['province'] == kota:
-                rs(f".\n\n✅Alamat :{j['address']}\nTelepon :{j['phone']}\nNama :{j['name']}\n.")
+                rs(f".\nNama :{j['name']}\n\n✅Alamat :{j['address']}\nTelepon :{j['phone']}\n.")
 
     def daerah():
 
