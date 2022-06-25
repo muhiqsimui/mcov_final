@@ -176,6 +176,7 @@ def sms_reply():
         msg.body(rsx+rsx2+rsx3)
         msg.body(
             '\n Untuk informasi lebih lanjut anda cukup mengetikkan nama kota diatas')
+        responded = True            
 
 #     # Tutup Menampilkan daftar rumah sakit indonesia
     if pesan == '8':
