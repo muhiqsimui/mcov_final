@@ -109,7 +109,7 @@ def sms_reply():
     if pesan == "1":
         odi.get_global()
         prov.cek_provinsi('DAERAH ISTIMEWA YOGYAKARTA')
-        text = f"🚀Pantau situasi Covid-19🚀 \n\n *🌎 Global 🌎* \n Kasus Terkonfirmasi : {odi.jumlah_positif} \n Sembuh : {odi.jumlah_sembuh} \n Meninggal : {odi.jumlah_meninggal} \n\n "
+        text = f"🚀Pantau situasi Covid-19🚀 \n\n *🌎 Global 🌎* \n Kasus Terkonfirmasi : {odi.jumlah_positif} \n \n Meninggal : {odi.jumlah_meninggal} \n\n "
         text2 = f"\n *🇮🇩 Indonesia 🇮🇩* \n Kasus Terkonfirmasi : {info.jumlah_positif} \n Sembuh : {info.jumlah_sembuh}\n Meninggal : {info.jumlah_meninggal}\n Dirawat : {info.jumlah_dirawat} \n\n"
         text3 = f"\n *✈ Yogyakarta ✈* \n Kasus Terkonfirmasi : {prov.jumlah_positif}\n Sembuh : {prov.jumlah_sembuh}\n Meninggal : {prov.jumlah_meninggal}\n Dirawat : {prov.jumlah_dirawat} \n\n Data Terakhir Update : {info.last_update_id}"
         text4 = f"\n\nAnda dapat pantau provinsi lain cukup dengan ketik *nama provinsi* yang diinginkan"
