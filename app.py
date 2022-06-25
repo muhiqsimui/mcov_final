@@ -358,16 +358,13 @@ def sms_reply():
             elif "papua barat" in pl or 'sorong' in pl:
                 cari('Papua Barat')
             else:
-                responded=True
-                msg.body(responded)
-                # msg.body("Data yang Anda cari tidak ditemukan mohon masukan nama *Provinsi* yang tepat \n\n")
+                msg.body("Data yang Anda cari tidak ditemukan mohon masukan nama *Provinsi* yang tepat \n\n")
                 
             
     daerah()
 
     if responded == False:
-        msg.body(
-            'Anda bisa ketik *Menu* untuk kembali ke Menu Utama dan menggunakan *Whatsapp Bot COVID-19*')
+        msg.body('Anda bisa ketik *Menu* untuk kembali ke Menu Utama dan menggunakan *Whatsapp Bot COVID-19*')
 
     return str(resp)
 
