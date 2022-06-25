@@ -3,8 +3,8 @@ import requests as r
 # =====================================================================================
 
 # Data pemantauan diambil dari situs resmi indonesia covid19.go.id
-# url = r.get("https://data.covid19.go.id/public/api/update.json")
-url = r.get("http://127.0.0.1:8000/indonesia")
+url = r.get("https://data.covid19.go.id/public/api/update.json")
+# url = r.get("http://127.0.0.1:8000/indonesia")
 data = url.json()
 
 
@@ -35,9 +35,8 @@ upd_created = str(data_ind['penambahan']['created'])
 # ===================================================================================
 
 # DATA VAKSINASI
-# url_vaksinasi = r.get(
-#     'https://data.covid19.go.id/public/api/pemeriksaan-vaksinasi.json')
-url_vaksinasi = r.get('http://127.0.0.1:8000/vaksinasi')
+url_vaksinasi = r.get('https://data.covid19.go.id/public/api/pemeriksaan-vaksinasi.json')
+# url_vaksinasi = r.get('http://127.0.0.1:8000/vaksinasi')
 data_vaksinasi = url_vaksinasi.json()
 
 # ==================== DATA TEST PCR/SWAB ==================

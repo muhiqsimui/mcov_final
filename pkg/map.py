@@ -10,8 +10,8 @@ def mapping():
         zoom_start=6
     )
 
-    # url = r.get("https://data.covid19.go.id/public/api/prov.json")
-    url = r.get("http://127.0.0.1:8000/provinsi")
+    url = r.get("https://data.covid19.go.id/public/api/prov.json")
+    # url = r.get("http://127.0.0.1:8000/provinsi")
     data = url.json()
     for i in data['list_data']:
         if i['lokasi'] != None and len(i['lokasi']) == 2:
