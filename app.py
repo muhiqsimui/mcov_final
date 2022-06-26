@@ -101,7 +101,7 @@ def sms_reply():
     responded = False
 
     if pesan == 'menu' or pesan == 'Menu' or pesan == "MENU":
-        text = f'\n ==========🚀 *MENU* 🚀==========\n\n Berikut adalah fitur-fitur yang dapat anda gunakan : \n\n 1. Situasi COVID-19 Indonesia \n 2. Apa itu COVID-19 ? \n 3. Apa gejala COVID-19 ? \n 4. Cara melindungi diri dari COVID-19 \n 5. Cara melindungi orang lain dari COVID-19? \n 6. Penggunaan Masker kain? \n 7. Rumah sakit Rujukan COVID-19 \n 8. Edukasi test COVID-19\n 9. SKRINING Mandiri COVID-19\n 10. Pantau Vaksinasi\n\n ketik *NEWS* untuk Berita seputar COVID-19 \n\n  Silahkan balas dengan mengetikan angka sesuai Menu'
+        text = f'\n ==========🚀 *MENU* 🚀==========\n\n Berikut adalah fitur-fitur yang dapat anda gunakan : \n\n 1. Situasi COVID-19 Indonesia \n 2. Apa itu COVID-19 ? \n 3. Apa gejala COVID-19 ? \n 4. Cara melindungi diri dari COVID-19 \n 5. Cara melindungi orang lain dari COVID-19? \n 6. Penggunaan Masker kain? \n 7. Rumah sakit Rujukan COVID-19 \n 8. Edukasi test COVID-19\n 9. SKRINING Mandiri COVID-19\n 10. Pantau Vaksinasi\n\nketik *NEWS* untuk Berita seputar COVID-19\n\nSilahkan balas dengan mengetikan angka sesuai Menu'
         msg.body(text)
         responded = True
 
