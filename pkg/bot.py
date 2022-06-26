@@ -1,5 +1,0 @@
-
-
-
-def coba():
-    return "Oalah"
