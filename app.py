@@ -376,7 +376,7 @@ def sms_reply():
     
 
     if responded == False:
-        msg.body('Anda bisa ketik *Menu* untuk kembali ke Menu Utama dan menggunakan *Whatsapp Bot COVID-19*')
+        msg.body('Maaf kata kunci yang Anda masukkan kurang tepat\n\n Silahkan ketik *Menu* untuk kembali ke Menu Utama dan menggunakan *Whatsapp Bot COVID-19*')
 
     return str(resp)
 
