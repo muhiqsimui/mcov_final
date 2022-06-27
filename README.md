@@ -1,7 +1,7 @@
 # MuhicCov19Bot
 this is place to save my ongoing project for humanity help world
 and complete my study
-https://mcov2.herokuapp.com/
+https://mcov.herokuapp.com/
 
 run app
 ```console
@@ -34,7 +34,7 @@ pip install twilio
 
 setting twillio web hook like this url/sms
 ```console
-https://wabotcovid19.herokuapp.com/sms
+https://mcov.herokuapp.com/sms
 ```
 
 ### ALL COMMAND BOT 
