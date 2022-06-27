@@ -150,7 +150,7 @@ def sms_reply():
 
     def vaksinx():
         vax = f"""
-        DATA PENAMBAHAN HARIAN TEST PCR/SWAB INDONESIA
+        DATA PENAMBAHAN HARIAN TES PCR/SWAB INDONESIA
         Penambahan jumlah spesimen : {info.penambahan_jumlah_spesimen_pcr_tcm}
         Penambahan jumlah spesimen antigen : {info.penambahan_jumlah_spesimen_antigen}
         Penambahan jumlah orang pcr tcm : {info.penambahan_jumlah_orang_pcr_tcm}
@@ -186,7 +186,7 @@ def sms_reply():
         rsx3 = f"1.Aceh\n2.Sumatera Utara\n3.Sumatera Barat\n4.Riau\n5.Kepulauan Riau\n6.Jambi\n7.Sumatera Selatan\n8.Bangka Belitung\n9.Bengkulu\n10.Lampung\n11.DKI Jakarta\n12.Jawa Barat\n13.Banten\n14.Jawa Tengah\n15.Daerah Istimewa Yogyakarta\n16.Jawa Timur\n17.Bali\n18.Nusa Tenggara Barat\n19.Nusa Tenggara Timur\n20.Kalimantan Barat\n21.Kalimantan Tengah\n22.Kalimantan Selatan\n23.Kalimantan Timur\n24.Kalimantan Utara\n25.Gorontalo\n26.Sulawesi Utara\n27.Sulawesi Barat\n28.Sulawesi Tengah\n29. Sulawesi Selatan\n30.Sulawesi Tenggara\n31.Maluku\n32.Maluku Utara\n33.Papua\n34.Papua Barat  \n\n"
         msg.body(rsx+rsx2+rsx3)
         msg.body(
-            '\n Untuk informasi lebih lanjut anda cukup mengetikkan nama kota diatas')
+            '\n \nUntuk informasi lebih lanjut anda cukup mengetikkan nama kota diatas')
         responded = True
 
 #     # Tutup Menampilkan daftar rumah sakit indonesia
