@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import requests as r
 from twilio.twiml.messaging_response import MessagingResponse
 from random import randrange
-from pkg import info, odi, map ,who
+from pkg import info, map ,who
 from pkg import info_prov as prov
 import time
 
@@ -15,7 +15,6 @@ coder = "Muhammad Iqbal"
 
 @ app.route("/")
 def web():
-    # odi.get_global()
     prov.cek_provinsi('DAERAH ISTIMEWA YOGYAKARTA')
     return render_template(
         "index.html",
@@ -106,15 +105,12 @@ def sms_reply():
         responded = True
 
     if pesan == "1":
-        odi.get_global()
+
         prov.cek_provinsi('DAERAH ISTIMEWA YOGYAKARTA')
         text = f"🚀Pantau situasi Covid-19🚀 \n\n *🌎 Global 🌎* \n Total Kasus : {who.jumlah_positif}\n Meninggal : {who.jumlah_meninggal} \n\n "
         text2 = f"\n *🇮🇩 Indonesia 🇮🇩* \n Kasus Terkonfirmasi : {info.jumlah_positif} \n Sembuh : {info.jumlah_sembuh}\n Meninggal : {info.jumlah_meninggal}\n Dirawat : {info.jumlah_dirawat} \n\n"
         text3 = f"\n *✈ Yogyakarta ✈* \n Kasus Terkonfirmasi : {prov.jumlah_positif}\n Sembuh : {prov.jumlah_sembuh}\n Meninggal : {prov.jumlah_meninggal}\n Dirawat : {prov.jumlah_dirawat} \n\n Data Terakhir Update : {info.last_update_id}"
         text4 = f"\n\nAnda dapat pantau provinsi lain cukup dengan ketik *nama provinsi* yang diinginkan"
-        # msg.media(
-        #     "https://infeksiemerging.kemkes.go.id/storage/posts/May2021/ENnufhHVqBJr4JQix8mL.png")
-        # tidak pakai gambar karena memperlambat jalannya app
         msg.body(text+text2+text3+text4)
         responded = True
 
