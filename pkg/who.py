@@ -12,8 +12,8 @@ def scrape_case(url,class_name):
   x = soup.find_all("span", class_=class_name)
   g = x[2].text
   h = re.findall(r'\d+', g)
-  chara = ''.join(map(str,h))
-  return chara
+  s_case = ''.join(map(str,h))
+  return s_case
 
 # scrape_case('https://covid19.who.int/','sc-fzoVTD ckBKGO')
 
@@ -22,8 +22,8 @@ def scrape_death(url,class_name):
   soup = BeautifulSoup(data.content, 'html.parser')
   x2 = soup.find("span", class_=class_name).text
   h = re.findall(r'\d+', x2)
-  final = ''.join(map(str,h))
-  return final
+  s_death = ''.join(map(str,h))
+  return s_death
 
 # scrape_death('https://covid19.who.int/','sc-fzoVTD wbXOD')
 
