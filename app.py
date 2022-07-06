@@ -143,37 +143,7 @@ def sms_reply():
         msg.body(text2+text)
         responded = True
 
-    def vaksinx():
-        vax = f"""
-        DATA PENAMBAHAN HARIAN TES PCR/SWAB INDONESIA
-        Penambahan jumlah spesimen : {info.penambahan_jumlah_spesimen_pcr_tcm}
-        Penambahan jumlah spesimen antigen : {info.penambahan_jumlah_spesimen_antigen}
-        Penambahan jumlah orang pcr tcm : {info.penambahan_jumlah_orang_pcr_tcm}
-        Penambahan jumlah orang antigen : {info.penambahan_jumlah_orang_antigen}
-        Penambahan tanggal : {info.penambahan_tanggal}
-        Penambahan created : {info.penambahan_created}
-
-        TOTAL SWAB PCR INDONESIA
-        Total jumlah spesimen pcr tcm : {info.total_jumlah_spesimen_pcr_tcm}
-        total jumlah spesimen antigen : {info.total_jumlah_spesimen_antigen}
-        total jumlah orang pcr tcm : {info.total_jumlah_orang_pcr_tcm}
-        total jumlah orang antigen : {info.total_jumlah_orang_antigen}
-
-        DATA PENAMBAHAN VAKSINASI
-        pcr_jumlah_vaksinasi_1 : {info.pcr_jumlah_vaksinasi_1}
-        pcr_jumlah_vaksinasi_2 : {info.pcr_jumlah_vaksinasi_2}
-        tanggal : {info.tanggal}
-        created : {info.created}
-
-        TOTAL DATA YANG TELAH DIVAKSIN
-        vaksin jumlah vaksinasi 1 : {info.vaksin_jumlah_vaksinasi_1}
-        vaksin jumlah vaksinasi 2 : {info.vaksin_jumlah_vaksinasi_2}
-        """
-        
-        
-        msg.body(vax)
-        responded = True
-
+    
     if pesan == '7':
         # Menampilkan daftar rumah sakit indonesia
         rsx = f".\nMenurut data Kementerian Kesehatan saat ini ada 132 Rumah Sakit rujukan di indonesia untuk penanganan kasus COVID-19.\n\n"
@@ -199,7 +169,32 @@ def sms_reply():
         responded = True
 
     if pesan == '10':
-        vaksinx()
+        vax = f"""
+        DATA PENAMBAHAN HARIAN TES PCR/SWAB INDONESIA
+        Penambahan jumlah spesimen : {info.penambahan_jumlah_spesimen_pcr_tcm}
+        Penambahan jumlah spesimen antigen : {info.penambahan_jumlah_spesimen_antigen}
+        Penambahan jumlah orang pcr tcm : {info.penambahan_jumlah_orang_pcr_tcm}
+        Penambahan jumlah orang antigen : {info.penambahan_jumlah_orang_antigen}
+        Penambahan tanggal : {info.penambahan_tanggal}
+        Penambahan created : {info.penambahan_created}
+
+        TOTAL SWAB PCR INDONESIA
+        Total jumlah spesimen pcr tcm : {info.total_jumlah_spesimen_pcr_tcm}
+        total jumlah spesimen antigen : {info.total_jumlah_spesimen_antigen}
+        total jumlah orang pcr tcm : {info.total_jumlah_orang_pcr_tcm}
+        total jumlah orang antigen : {info.total_jumlah_orang_antigen}
+
+        DATA PENAMBAHAN VAKSINASI
+        pcr_jumlah_vaksinasi_1 : {info.pcr_jumlah_vaksinasi_1}
+        pcr_jumlah_vaksinasi_2 : {info.pcr_jumlah_vaksinasi_2}
+        tanggal : {info.tanggal}
+        created : {info.created}
+
+        TOTAL DATA YANG TELAH DIVAKSIN
+        vaksin jumlah vaksinasi 1 : {info.vaksin_jumlah_vaksinasi_1}
+        vaksin jumlah vaksinasi 2 : {info.vaksin_jumlah_vaksinasi_2}
+        """
+        msg.body(vax)
         responded = True
 
     if 'news' in pesan or "News" in pesan or 'berita' in pesan:
@@ -283,14 +278,12 @@ def sms_reply():
             cari("Banten")
 
         elif "jawa tengah" in pl or "jateng" in pl or "semarang" in pl:
-            # PROBLEM GK JALAN lebih 1600
             cari("Jawa Tengah")
 
         elif "daerah istimewa yogyakarta" in pl or "yogyakarta" in pl or "jogja" in pl or "diy" in pl:
             cari('DI Yogyakarta')
 
         elif "jawa timur" in pl or "jatim" in pl or "Jawa Timur" in pl or "surabaya" in pl:
-            # PROBLEM GK JALAN lebih 1600 karakter
             cari('Jawa Timur')
 
         elif "bali" in pl:
