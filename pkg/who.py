@@ -15,8 +15,6 @@ def scrape_case(url,class_name):
   s_case = ''.join(map(str,h))
   return s_case
 
-# scrape_case('https://covid19.who.int/','sc-fzoVTD ckBKGO')
-
 def scrape_death(url,class_name):
   data = r.get(url)
   soup = BeautifulSoup(data.content, 'html.parser')
@@ -24,8 +22,6 @@ def scrape_death(url,class_name):
   h = re.findall(r'\d+', x2)
   s_death = ''.join(map(str,h))
   return s_death
-
-# scrape_death('https://covid19.who.int/','sc-fzoVTD wbXOD')
 
 jumlah_positif = str(scrape_case('https://covid19.who.int/','sc-fzoVTD ckBKGO'))
 jumlah_sembuh = '0'

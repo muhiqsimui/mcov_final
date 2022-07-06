@@ -105,7 +105,6 @@ def sms_reply():
         responded = True
 
     if pesan == "1":
-
         prov.cek_provinsi('DAERAH ISTIMEWA YOGYAKARTA')
         text = f"🚀Pantau situasi Covid-19🚀 \n\n *🌎 Global 🌎* \n Total Kasus : {who.jumlah_positif}\n Meninggal : {who.jumlah_meninggal} \n\n "
         text2 = f"\n *🇮🇩 Indonesia 🇮🇩* \n Kasus Terkonfirmasi : {info.jumlah_positif} \n Sembuh : {info.jumlah_sembuh}\n Meninggal : {info.jumlah_meninggal}\n Dirawat : {info.jumlah_dirawat} \n\n"
@@ -221,39 +220,23 @@ def sms_reply():
         responded = True
 
     def cari(kota):
-        
-        server_ind = 1
-
-        if (server_ind == 1):
-            xin = r.get('https://dekontaminasi.com/api/id/covid19/stats')
-            cov_raw = xin.json()
-        elif(server_ind == 2):
-            xin = r.get('https://data.covid19.go.id/public/api/update.json')
-            cov_raw = xin.json()
+        xin = r.get('https://data.covid19.go.id/public/api/update.json')
+        cov_raw = xin.json()
 
         # # yogyakarta
-        if (server_ind == 1):
-            resp_diy = r.get('https://dekontaminasi.com/api/id/covid19/stats')
-            cov_raw_diy = resp_diy.json()
-            cov_provin = cov_raw_diy['regions']
-        if (server_ind == 2):
-           
-            resp_diy = r.get('https://data.covid19.go.id/public/api/prov.json')
-            cov_raw_diy = resp_diy.json()
-            cov_provin = cov_raw_diy['list_data']
+        resp_diy = r.get('https://data.covid19.go.id/public/api/prov.json')
+        cov_raw_diy = resp_diy.json()
+        cov_provin = cov_raw_diy['list_data']
 
         msg.body("Berikut daftar *Rumah Sakit rujukan COVID-19* \n\n")
         rs_url = r.get(
             "https://raw.githubusercontent.com/muhiqsimui/PyTraining/main/json/rs.json")
         datrs = rs_url.json()
         for pro in cov_provin:
-            if (server_ind == 1):
-                if pro['name'] == kota:
-                    rs(f"\n *{pro['name']}* \n Kasus :{pro['numbers']['infected']} \n Sembuh : {pro['numbers']['recovered']} \n Meninggal :{pro['numbers']['fatal']}\n")
-            elif(server_ind == 2):
-                kotax = kota.upper()
-                if pro['key'] == kotax:
-                    rs(f"\n *{pro['key']}* \n Kasus :{pro['jumlah_kasus']} \n Sembuh : {pro['jumlah_sembuh']} \n Meninggal :{pro['jumlah_meninggal']}\n")
+            
+            kotax = kota.upper()
+            if pro['key'] == kotax:
+                rs(f"\n *{pro['key']}* \n Kasus :{pro['jumlah_kasus']} \n Sembuh : {pro['jumlah_sembuh']} \n Meninggal :{pro['jumlah_meninggal']}\n")
         for j in datrs:
             # kota=kota.title()
             if j['province'] == kota:
