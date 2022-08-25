@@ -1,0 +1,18 @@
+Daftar API ataupun data yang digunakan
+
+API Kementerian Kesehatan
+https://covid19.go.id/dokumentasi-api
+https://data.covid19.go.id/public/api/prov.json
+https://data.covid19.go.id/public/api/update.json
+https://data.covid19.go.id/public/api/pemeriksaan-vaksinasi.json
+
+API Mathdroid id
+https://covid19.mathdro.id/api
+https://covid19.mathdro.id/api/countries/
+
+WHO
+https://covid19.who.int/
+
+API Dekontaminasi
+https://dekontaminasi.com/api/id/covid19/hospitals
+https://dekontaminasi.com/api/id/covid19/news
