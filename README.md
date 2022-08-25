@@ -1,3 +1,7 @@
+## Important Note
+still maintenance because there is still an error due to update heroku from stack-18 to stack-20 where currently the code still can't be deployed to heroku
+the web service can still be run manually, just download and run it via python on your pc
+
 # MuhicCov19Bot
 this is place to save my ongoing project for humanity help world
 and complete my study
