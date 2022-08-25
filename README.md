@@ -2,7 +2,7 @@
 still maintenance because there is still an error due to update heroku from stack-18 to stack-20 where currently the code still can't be deployed to heroku
 the web service can still be run manually, just download and run it via python on your pc
 
-# MuhicCov19Bot
+# MuhiqCov19Bot
 this is place to save my ongoing project for humanity help world
 and complete my study
 https://mcov.herokuapp.com/
@@ -20,26 +20,31 @@ then this code will be online
 hook web from ngrok and open twilio then copy link to webhook and test app on your whatsapp
 or we can host the app to heroku hosting
 
-Requirements  
-- Python 3.7.1
-- Flask 
-```console
-pip install flask
-```
-- Requests
-```console
-pip install requests
-```
-- Twilio
-```console
-pip install twilio
-```
-## HOW TO USE
+## HOW TO USE ONLINE
+- deploy on heroku
+- hook your heroku link to twilio
+http://your_heroku_link/sms
+- then whatsapp bot is online
 
-setting twillio web hook like this url/sms
+## HOW TO USE THIS BOT ON PC 
+Requirements  
+- install Python 3.10.6
+- install all requirements with command
 ```console
-https://mcov.herokuapp.com/sms
+pip install requirements.txt
 ```
+- run python webservice
+```console
+python app.py
+```
+- make webservice online on port 5000
+```console
+ngrok http 5000
+```
+- hook your ngrok link to twilio
+http://your_ngrok_link/sms
+- then whatsapp bot is online
+
 
 ### ALL COMMAND BOT 
 - Menu 1-9
